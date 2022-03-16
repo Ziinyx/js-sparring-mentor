@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+</head>
+<body>
+	<header>Spli<span>tter</span></header>
+	<main class="splitter">
+	
+		<form class="add-input" onsubmit="return false;">
+		
+			<label>Bill</label>
+			<div class="bill">
+			<img src="images/icon-dollar.svg">
+			<input type="number" class="billAmount" onchange=getValueInput() min="1" step="0.01" placeholder="0" >
+			</div>
+			
+			<label>Select Tip %</label>
+			<div class="tip-opt">
+			<button class="tip-per" value=5 >5%</button>
+			<button class="tip-per" value=10 >10%</button>
+			<button class="tip-per" value=15 >15%</button>
+			<button class="tip-per" value=25 >25%</button>
+			<button class="tip-per" value=50 >50%</button>
+			<input class="tip-per" id="customNo" type="number" min="1" max="100" placeholder="Custom" >
+			</div>
+			
+			<label>Number of People <span class="error"></span></label>
+			<div class="people">
+			<img src="images/icon-person.svg">
+			<input type="number" class="noOfPeople" onchange=getValueInput()  min="1" placeholder="0">
+			</div>
+			
+		</form>
+  
+		<form class="tip" onsubmit="return false;">
+		<div>
+		<div class="amount">
+			<div><span>Tip Amount</span>
+			/ person</div>
+			<div id="tip-amount">$0.00</span></div>
+		</div>
+
+		<div class="total">
+			<div><span>Total</span>
+			/ person</div>
+			<div id="total-amount">$0.00</div>
+		</div>
+		</div>
+
+		<button id="reset" onclick=handleReset()>Reset</button>
+		</form>
+		
+	</main>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Aditi Pathak</a>.
+  </div>
+  
+	<script src="main.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Order summary card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	
+	body{
+		background-color:  hsl(225, 100%, 94%);
+	}
+	
+	.card {
+		overflow: hidden;
+		margin: 3em 1.4em;
+		background-color: white;
+		color: hsl(224, 23%, 55%);
+		border-radius: 20px;
+		text-align: center;
+	}
+	
+	.card-info{
+		padding: 1em 1.4em;
+	}
+	.card-info h1, h4{
+		font-weight: bold;
+		color: hsl(223, 47%, 23%);
+	}
+	
+	.card-info p{
+		padding: 1em 1em 0 1em;
+	}
+	
+	.inner-card{
+		padding: 1em;
+		margin: 1.4em 0;
+		border-radius: 10px;
+		background-color: hsl(225, 100%, 98%);
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	
+	.inner-card p{
+		padding-top: 0;
+	}
+	
+	.inner-plan{
+		margin-right: 1.4em;
+	}
+	
+	a{
+		color: hsl(245, 75%, 52%);
+	}
+	a:hover{
+		color: hsl(224, 23%, 55%);
+		text-decoration: none;
+	}
+	
+	button{
+		border: none;
+		border-radius: 10px;
+		padding: 1em;
+		font-weight: bold;
+		width: 100%;
+	}
+	
+	.btn{
+		margin: 1em 0;
+	}
+	
+	.btn1 {
+		background-color: hsl(245, 75%, 52%);
+		color: white;
+		margin-bottom: 0.8em;
+		box-shadow: 0px 20px 20px -2px #c5d0f7;
+	}
+	.btn1:hover{
+		background-color: hsl(224, 23%, 55%);
+	}
+	
+	.btn2{
+		color: hsl(224, 23%, 55%);
+		background: none;
+	}
+	
+	.btn2:hover{
+		color: hsl(223, 47%, 23%);
+	}
+	
+	@media screen and (min-width: 500px){
+		body {
+			width: 440px;
+			background: hsl(225, 100%, 94%) url("images/pattern-background-desktop.svg") no-repeat;
+			margin: auto;
+		}
+	}
+	
+  </style>
+</head>
+<body>
+	
+	<section class="card">
+	<img src="images/illustration-hero.svg" width="100%">
+	
+	<div class="card-info">
+	<h1>Order Summary</h1>
+
+	<p>You can now listen to millions of songs, audiobooks, and podcasts on any 
+	device anywhere you like!</p>
+
+	<div class="inner-card">
+	
+	<img src="images/icon-music.svg">
+	
+	<div class="inner-plan">
+	<h4>Annual Plan</h4>
+	<p>$59.99/year</p>
+	</div>
+	
+	<a href="#">Change</a>
+	</div>
+	
+	<div class="btn">
+	<button class="btn1">Proceed to Payment</button>
+	<button class="btn2">Cancel Order</button>
+	</div>
+	</div>
+	
+	 </section>
+	
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Ziinyx zin</a>.
+  </div>
+  
+</body>
+</html>

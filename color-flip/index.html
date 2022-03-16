@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	    <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<meta name="author" content="Zinyx zin">
+		<meta name="keywords" content="Frontend dev, Zinyx">
+		
+		<title>Color Finite</title>
+		
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			
+			a{
+				text-decoration: none;
+			}
+			
+			ul{
+				list-style: none;
+			}
+			
+			li{
+				display: inline;
+			}
+			
+			nav{
+				width: 100vw;
+				padding: 0.6em 4em;
+				position: fixed;
+				top: 0;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				font-weight: bold;
+				background: white;
+			}
+			
+			nav h4{
+				display: inline;
+				color: deepskyblue;
+			}
+			
+			.container{
+				width: 100vw;
+				padding: 8em;
+				display: flex;
+				flex-direction: column;
+				gap: 1em;
+				justify-content: center;
+				align-items: center;
+				
+			}
+			
+			main h2{
+				padding: 1em;
+				background: black;
+				color: white;
+			}
+			
+			button{
+				padding: 0.8em 2em;
+				border: none;
+				border-radius: 8px;
+				color: white;
+				background: black;
+				font-weight: bold;
+			}
+			
+			button:hover{
+				outline: 1px black solid;
+			}
+			
+			img{
+				background: white;
+			}
+			
+			@media screen and (max-width: 650px){
+				nav{
+					padding: 0.8em 1em;
+				}
+				
+				.container{
+					padding: 4em 1em;
+				}
+				
+				h2{
+					font-size: 16px;
+					line-height: 150%;
+				}
+			}
+		</style>
+    </head>
+
+    <body>
+	
+		<nav>
+			<h4>Color Finite</h4>
+			<ul class="nav-links">
+				<li><a>Hex colors</a></li>
+			</ul>
+		</nav>
+		
+		<main>
+			<div class="container">
+				<h2>background-color: <span class="color" id="hex">#f1f8f5</span></h2>
+				<button id="btn">Change Color</button>
+			</div>
+		</main>
+		
+		<script>
+			const btn = document.getElementById("btn");
+			const color = document.querySelector(".color");
+			var hex = ["0","1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"];
+			const copyBtn = document.getElementById("copyBtn");
+			
+			btn.addEventListener("click", function() {
+				
+				let hexColor = "#"
+				
+				for(let i=0; i<6; i++ ){
+					hexColor += hex[Math.floor(Math.random() * hex.length)];
+				}
+				
+				document.body.style.backgroundColor = hexColor;
+				color.textContent = hexColor;
+			});
+			
+		</script>
+	</body>	
+</html>

@@ -1,0 +1,198 @@
+	@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400&display=swap');
+	
+    .attribution { margin: 1rem 0; font-weight: bold; font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+	
+	*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	
+	body{
+		font-family: 'Space Mono', monospace;
+		background: hsl(185, 41%, 84%);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+		
+	header{
+		padding: 2em;
+		line-height: 150%;
+		text-align: center;
+		text-transform: uppercase;
+		color: hsl(183, 100%, 15%);
+	}
+	
+	header span{
+		display: block;
+	}
+	
+	button{
+		padding: 0.5em 0;
+		border: none;
+		background: hsl(183, 100%, 15%);
+		color: white;
+		font-weight: bold;
+		text-align: center;
+		border-radius: 5px;
+	}  
+	
+	label{
+		display: block;
+		margin: 1em 0;
+		font-weight: bold;
+	}
+	
+	input{
+		width: 100%;
+		padding-right: 0.6em;
+		text-align: right;
+		font-weight: bold;
+		background: transparent;
+		color: hsl(183, 100%, 15%);
+		border: none;
+		outline: none;
+	}
+
+/*chrome, safari, opera*/
+	input[type=number]::-webkit-inner-spin-button,
+	input[type=number]::-webkit-outer-spin-button
+	{
+		-webkit-appearance: none;
+	}
+
+/* mozilla*/
+	input[type=number]{
+		-moz-appearance: textfield;
+	}
+	
+	.splitter{
+		width: 360px;
+		padding: 1.4em;
+		background:	white;
+		color: hsl(186, 14%, 43%);
+		border-radius: 20px;
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+	}
+	
+	
+	.tip-opt{
+		margin: 1em 0;
+		display: grid;
+		grid-template-columns: auto auto;
+		justify-content: space-between;
+		gap: 1em;
+	}
+	
+	.tip-opt button, input{
+		width: 8em;
+		font-size: 18px;	
+	}
+	
+	#customNo{
+		background: hsl(189, 41%, 97%);
+		color: hsl(183, 100%, 15%);
+		font-size: 18px;
+		border: 2px solid transparent;
+		border-radius: 5px;
+	}
+	
+	.tip-per:hover{
+		background:  hsl(172, 67%, 45%);
+		color: hsl(183, 100%, 15%);
+	}
+	
+	
+	.people, .bill{
+		padding: 0.5em;
+		background: hsl(189, 41%, 97%);
+		border-radius: 5px;
+		display:flex;
+		justify-content: space-between;
+		align-itmes: center;
+		border: 2px solid transparent;
+	}
+	
+	.people img, .bill img{
+		width: 12px;
+		height: 16px;
+	}
+
+	#customNo:hover, .bill:hover, .people:hover{
+		border: 2px solid hsl(172, 67%, 45%);
+	}
+	
+	.tip{
+		padding: 1.4em;
+		background: hsl(183, 100%, 15%);
+		border-radius: 10px;
+		color: hsl(185, 41%, 84%);
+	}
+	
+	.tip span{
+		display: block;
+		font-size: 16px;
+		color: white;
+	}
+	
+	
+	.total, .amount{
+		display: flex;
+		flex-direction: row;
+		padding: 1em 0;
+		justify-content: space-between;
+		align-items: center;
+	}
+	
+	#tip-amount, #total-amount{
+		color: hsl(172, 67%, 45%);
+		font-size: 24px;
+		font-weight: bold;
+	}
+	
+	#reset{
+		width: 100%;
+		padding: 1em 0.4em;
+		background:  hsl(172, 67%, 45%);
+		color: hsl(183, 100%, 15%);
+		text-transform: uppercase;
+	}
+	
+	.error{
+		font-weight: bold;
+		font-size: 10px;
+		color: red;
+	}
+	
+	@media screen and (min-width: 800px){
+		
+	.splitter{
+		width: 750px;
+		flex-direction: row;
+		gap: 1em;
+	}
+	
+	.add-input{
+		width: 50%;
+	}
+	.tip-opt{
+		display: grid;
+		grid-template-columns: auto auto auto;
+	}
+	
+	.tip-opt button, input{
+		width: 6em;
+	}
+	
+	.tip{
+		width: 50%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	}

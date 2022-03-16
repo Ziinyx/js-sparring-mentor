@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Fylo data storage component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+	@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap');
+	
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+	
+	:root{
+		font-size: 14px;
+	}
+	
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	
+	body{
+		font-family: 'Raleway',sans-serif;
+		 background:  hsl(229, 57%, 11%) url("images/bg-mobile.png") no-repeat;
+	}
+	
+	section{
+		margin: 10em 1.4em;	
+	}
+	
+	span{
+		font-weight: bold;
+	}
+	
+	.card{
+		background-color: hsl(228, 56%, 26%);
+		border-radius: 10px;
+		padding: 3em;
+		margin: 1em;
+		color: hsl(243, 100%, 93%);
+	}
+	
+	#card1{
+		border-top-right-radius: 100px;
+		padding: 3em  2em;
+	}
+	
+	.wrap{
+		display: flex;
+		flex-direction: row;
+		gap: 1em;
+		padding-top: 2em;
+	}
+	
+	.wrap img{
+		background-color: hsl(229, 57%, 11%);
+		border-radius: 8px;
+		padding:1em;
+	}
+	
+	.card p{
+		padding: 0 1em 1rem 0;
+	}
+	
+	input[type=range]{
+		webkit-appearance: none;
+		width: 100%;
+	}
+	
+	.track{
+		width: 70%;
+		height: 1em;
+		background: linear-gradient(hsl(6, 100%, 80%),hsl(335, 100%, 65%));
+		border-radius: 10px:
+	}
+	
+	.amount{
+		display: flex;
+		justify-content: space-between;
+		font-weight: bold;
+	}
+	
+	@media screen and (min-width: 750px){
+	
+		body{
+			background: hsl(229, 57%, 11%) url("images/bg-desktop.png") no-repeat;
+		}
+		
+		section{
+			width: 90vw;
+			display: flex;
+			justify-content: center;
+			align-items: end;
+		}
+		
+		.card{
+			width: 500px;
+		}
+		
+		#card1{
+			width: 250px;
+		}
+	}
+  </style>
+</head>
+
+<body>
+	
+	<section>
+	
+	<div class="card" id="card1">
+	<img src="images/logo.svg">
+	
+		<div class="wrap">
+			<img src="images/icon-document.svg">
+			<img src="images/icon-folder.svg">
+			<img src="images/icon-upload.svg">
+		</div>
+	</div>
+
+	<div class="card">
+		<p>You’ve used <span class="storage">500</span> GB of your storage</p>
+
+		<input class="range"type="range" min="0" max="1000" name="gb">
+		<div class="slider">
+			<div class="inner-slider"></div>
+		</div>
+	
+		<div class="amount">
+			<span>0 GB</span>
+			<span>1000 GB</span>
+		</div>
+	</div>
+	
+	</section>
+	
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Aditi Pathak</a>.
+  </div>
+  
+  <script>
+	const range= document.getElementsByClassName('range')[0];
+	const storage= document.getElementsByClassName('storage')[0];
+	
+	const setValue = () => {
+		storage.innerHTML = range.value;
+	}
+	
+	range.addEventListener("input", setValue);
+  </script>
+  
+  
+</body>
+</html>
